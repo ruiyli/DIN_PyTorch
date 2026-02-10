@@ -67,7 +67,7 @@ Input Features
 ## 📁 Project Structure
 
 ```
-18_KDD_DIN/
+DIN/
 ├── README.md                  # This file
 ├── model.py                   # DIN model implementation
 ├── attention.py               # Attention mechanism (Local Activation Unit)
@@ -95,7 +95,7 @@ After downloading, organize the data as follows:
 ```
 RankingModels/
 ├── Codes/
-│   └── 18_KDD_DIN/
+│   └── DIN/
 │       └── (this repository)
 └── data/
     ├── local_train_splitByUser    # Training data
@@ -217,15 +217,14 @@ lr = 0.001                  # Learning rate
 During training, you'll see:
 
 ```
-UID Embedding trainable params: 9775080
-MID Embedding trainable params: 6623694
-CAT Embedding trainable params: 28818
-Attention Layer trainable params: 14760
-MLP Layer trainable params: 48560
-Total trainable params: 16490912
-
-epoch: 1/iter: 500, train loss: 0.5234, train acc: 0.7123
-test_auc: 0.7856, test_loss: 0.4987, test_acc: 0.7345
+UID Embedding trainable params: 6516720
+MID Embedding trainable params: 4415796
+CAT Embedding trainable params: 19212
+Attention Layer trainable params: 11041
+MLP Layer trainable params: 38536
+Total trainable params: 11001305
+test_auc: 0.5039, test_loss: 0.3661, test_acc: 0.5009
+epoch: 1/iter: 500, train loss: 0.3340, train acc: 0.5775
 ...
 ```
 
@@ -284,15 +283,6 @@ The model is evaluated on:
 Checkpoints are saved in:
 - `output/`: Training checkpoints (every 1000 iterations)
 - `best_model/`: Best model based on test AUC
-
-## 🐛 Known Issues & Fixes
-
-### Issue 1: `os.mkdir` Error
-**Error**: `TypeError: 'exist_ok' is an invalid keyword argument for mkdir()`
-**Fix**: Use `os.makedirs()` instead of `os.mkdir()`
-
-### Issue 2: Data Path
-Ensure data directory is correctly organized relative to the code folder.
 
 ## 📚 Citation
 
