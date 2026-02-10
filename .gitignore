@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+
+# Training outputs
+output/
+best_model/
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Data files (too large for git)
+../data/
+*.pkl
+*.gz
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Environment
+.env
